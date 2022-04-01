@@ -1,0 +1,408 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+html {
+  /* default font size is 16 px //// 100% = 16px /// 62.5% = 10px */
+  font-size: 62.5%;
+}
+
+h1 {
+  margin: 0.8rem;
+}
+
+p {
+  color: #bebebe;
+  margin: 1.5rem;
+}
+
+/* the card container div used for positioning */
+.product-card-container {
+  background-color: hsl(225, 100%, 94%);
+  background-image: url('images/pattern-background-desktop.svg');
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.product-card-material {
+  background-color: #ffffff;
+  box-shadow: 0 1.5rem 1.0rem #C5C5C5;
+  border-radius: 2.0rem;
+  width: 25%;
+  margin-top: 3%;
+}
+
+.card-picture img {
+  width: 100%;
+  border-top-left-radius: 2.0rem;
+  border-top-right-radius: 2.0rem;
+}
+
+.card-picture {
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 1.3rem;
+  padding-bottom: 0;
+  text-align: center;
+}
+
+.grid-subscription-plan {
+  background-color: hsl(225, 100%, 98%);
+  margin: auto;
+  padding: 0.7rem;
+  border-radius: 0.9rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  max-width: 80%;
+}
+
+.music-icon {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 0.4rem;
+  margin-right: 0.7rem;
+}
+
+.music-icon img {
+  width: 55%;
+}
+
+.annual-plan-rate {
+  display: flex;
+  flex: 2;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 0.8rem;
+}
+
+#rate {
+  margin: 0.4rem 0 0 0;
+  font-size: inherit;
+}
+
+.change-link {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 0.9rem;
+}
+
+.change-link a {
+  color: hsl(245, 75%, 52%);
+}
+
+.change-link a:hover {
+  text-decoration: none;
+  color: #6b5adb;
+}
+
+.button {
+  max-width: 90%;
+  margin: 1.5rem 3rem 1.9rem;
+}
+
+button {
+  -webkit-border-radius: 1.7rem;
+  -moz-border-radius: 1.7rem;
+  border-radius: 0.9rem;
+  -webkit-box-shadow: 0rem 1.8rem 0.9rem #e0e8ff;
+  -moz-box-shadow: 0rem 1.8rem 0.9rem #e0e8ff;
+  box-shadow: 0rem 1.6rem 0.8rem #e0e8ff;
+  color: #ffffff;
+  font-size: small;
+  background: #4532d1;
+  padding: 1rem 3.5rem 1rem 3.5rem;
+  text-decoration: none;
+  width: 100%;
+  border-style: hidden;
+}
+
+button:hover {
+  background: #6b5adb;
+  text-decoration: none;
+}
+
+.cancel {
+  text-align: center;
+  color: #808080;
+  margin: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.cancel span:hover {
+  color: #202020;
+}
+
+.attribution {
+  margin-top: 1rem;
+}
+
+/* media queries are always placed beneath the main code
+   since the specificity of selectors of media and normal code is same.
+   It is by virtue of media queries being /after/ the main code that they are able to override the selectors in main code.
+   Also, the order goes from maximum device size to minimum device size when you're using max-width.
+   To break the order, just specify @media(width: - px) instead of writing max-width.
+   That way, it will apply the specified styles to only that width and not upon the ranges of width
+   e.g 768 - <some> px in the case where your last max-width media query was 768.
+   Since, in this code,  queries are being applied like this:
+   0 - 320px
+   320 - 375px
+   375 - 425px
+   425 - 768px
+   For 1024px, we have the main code that we want to be used.
+   To get query to apply to ONLY 1440px and not to 768px - 1440px (which would override the 1024px code), 
+   we use width instead of max-width */
+   
+@media(width: 1440px) {
+  html {
+    font-size: 82%;
+  }
+
+  .product-card-material {
+    width: 30%;
+  }
+
+  .card-content p {
+    font-size: 1.2rem;
+  }
+
+  .music-icon {
+    margin: 0.5rem;
+    margin-right: 0.7rem;
+  }
+
+  .grid-subscription-plan {
+    padding: 0.6rem;
+    padding-left: 0.3rem;
+  }
+
+  .annual-plan-rate {
+    margin-top: 1rem;
+  }
+
+  #rate {
+    font-size: medium;
+  }
+
+  h4 {
+    font-size: medium;
+  }
+
+  .change-link a {
+    font-size: medium;
+  }
+
+  button {
+    font-size: medium;
+  }
+
+  .cancel span {
+    font-size: medium;
+  }
+
+  .attribution {
+    margin-top: 6rem;
+  }
+
+  .attribution span {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+}
+
+@media(max-width: 768px) {
+  html {
+    font-size: 65%
+  }
+
+  .product-card-material {
+    width: 35%;
+  }
+
+  .music-icon {
+    margin: 0.5rem;
+    margin-right: 0.7rem;
+  }
+
+  .music-icon img {
+    width: 45%;
+  }
+
+  .grid-subscription-plan {
+    padding: 0.6rem;
+    padding-left: 0.3rem;
+  }
+
+  .annual-plan-rate {
+    margin-top: 1rem;
+  }
+
+  .button {
+    margin: 1.5rem, 3rem, 2.1rem;
+  }
+
+  button {
+    font-size: x-small;
+  }
+
+  .attribution {
+    margin-top: 5.5rem;
+  }
+
+  .attribution span {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+@media(max-width: 425px) {
+  html {
+    font-size: 75%;
+  }
+
+  .product-card-material {
+    width: 80%;
+  }
+
+  .card-content h1{
+    font-size: 1.7rem;
+  }
+
+  .music-icon {
+    margin: 0.5rem;
+    margin-right: 0.7rem;
+  }
+
+  .grid-subscription-plan {
+    padding: 0.8rem;
+    padding-left: 0.3rem;
+  }
+
+  .annual-plan-rate {
+    margin-top: 1rem;
+  }
+
+  .change-link {
+    margin-right: 0.5rem;
+  }
+
+  .button {
+    margin: 1.5rem, 2.4rem, 1.9rem;
+  }
+
+  .attribution {
+    margin-top: 5.5rem;
+    max-width: 16rem;
+    text-align: center;
+  }
+
+  button {
+    font-size: smaller;
+  }
+}
+
+@media(max-width: 375px) {
+  html {
+    font-size: 70%;
+  }
+
+  .product-card-material {
+    width: 80%;
+  }
+
+  .card-content h1{
+    font-size: 1.7rem;
+  }
+
+  .music-icon {
+    margin: 0.5rem;
+    margin-right: 0.6rem;
+  }
+
+  .grid-subscription-plan {
+    padding: 0.8rem;
+    padding-left: 0.3rem;
+  }
+
+  .annual-plan-rate {
+    margin-top: 1rem;
+  }
+
+  .change-link {
+    margin-right: 0.5rem;
+  }
+
+  .button {
+    margin: 1.5rem, 2.4rem, 1.9rem;
+  }
+
+  .attribution {
+    margin-top: 5.5rem;
+    max-width: 16rem;
+    text-align: center;
+  }
+
+  button {
+    font-size: smaller;
+  }
+}
+
+@media(max-width: 320px) {
+  html {
+    font-size: 70%;
+  }
+
+  .product-card-material {
+    width: 80%;
+  }
+
+  .card-content h1{
+    font-size: 1.7rem;
+  }
+
+  .music-icon {
+    margin: 0.5rem;
+    margin-right: 0.7rem;
+  }
+
+  .grid-subscription-plan {
+    padding: 0.8rem;
+    padding-left: 0.3rem;
+  }
+
+  .annual-plan-rate {
+    margin-top: 0.5rem;
+  }
+
+  .change-link {
+    margin-right: 0.5rem;
+  }
+
+  .button {
+    margin: 1.5rem, 2.4rem, 1.9rem;
+  }
+
+  .attribution {
+    margin-top: 5.5rem;
+    max-width: 16rem;
+    text-align: center;
+  }
+
+  button {
+    font-size: smaller;
+  }
+}
