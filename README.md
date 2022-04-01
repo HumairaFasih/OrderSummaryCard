@@ -9,7 +9,7 @@ This is a solution to the [Order summary card challenge on Frontend Mentor](http
   - [Screenshots](#screenshots)
 - [Solution Link](#solution-link)
 - [My process](#my-process)
-  - [Built with](#built-with)
+  - [Tools and Technologies Used](#tools-and-technologies-used)
   - [Major Concepts I learned](#major-concepts-i-learned)
 - [Future Plans](#future-plans)
 
@@ -42,7 +42,7 @@ The URL: [Add solution URL here](https://your-solution-url.com)
 
 ## My process
 
-### Built With
+### Tools and Technologies Used
 
 - Semantic HTML5 markup
 - Flexbox
