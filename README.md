@@ -35,11 +35,11 @@ Result on standard Mobile screen
 
 ![](./images/Mobile-view.png)
 
-**Disclaimer: The screenshots do not show the interactive elements' active states, please refer to the solution link to view them**
+**Disclaimer: The screenshots do not show the interactive elements' active states, please refer to the solution link to view them.**
 ## Solution Link 
 
-The Project is hosted on GitHub Pages. </br>
-The URL: [Add solution URL here](https://your-solution-url.com)
+The Project is hosted on GitHub Pages. <br>
+[View Solution to Challenge](https://humairafasih.github.io/OrderSummaryCard/)
 
 ## My process
 
